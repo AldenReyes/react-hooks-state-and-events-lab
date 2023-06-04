@@ -14,7 +14,7 @@ function Item({ name, category }) {
     <li className={liState}>
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className="add" onClick={handleAddToCart}>
+      <button className={liState ? "remove" : "add"} onClick={handleAddToCart}>
         {liState ? "Remove from Cart" : "Add to Cart"}
       </button>
     </li>
